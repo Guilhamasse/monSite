@@ -1,76 +1,524 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site web personnel</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
-</head>
-<body>
-
-    <section class="top-page">
-        
-        <div class="trait"></div>
-        
-        <header class="header">
-            <img src="Image/Logo G stylé.jpg" alt="Logo du site">
-            
-                <nav class="nav">
-                    
-                    <li>Accueil</li>
-
-                    <li>Projet professionnel</li>
-
-                    <li>Centres d'intêrets</li>
-                </nav>
-        </header>
-        <div class="landing-page">
-
-            <h1 class="big-title">Guilhamassé Quentin</h1>
-            <h2 class="text-welcome">Bonjour et bienvenue sur mon site! Je suis actuellement en 1ère année de BUT informatique à Blagnac et ici, tu retrouvera des informations sur moi comme mon CV, mon projet professionnel ou encore mes centres d'intêrets.</h2>
-            <a class="scroll-down" href="">Scroll <i class="fas fa-angle-down"></i></a>
-            
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Quentin G  .</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">A propos</a></li>
+          <li><a href="#experience">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
- 
-        
-    </section> 
-    
-
-    <section class="projet-page">
-        <h2 class="section-title">Mon projet professionnel</h2>
-        <p class="text-projet">J'ai fais un bac STI2D au lycée Victor Hugo à Colomiers avec l'option SIN. J'ai toujours aimé ce qui tourne autour de l'informatique et c'est pour cela que j'ai décidé d'étudier de domaine. Actuellement en 1ère année de BUT informatique, je sauhaite après avoir obtenu mon diplome poursuivre mes études, si j'en ai la possibilité en faisant un master ou une école d'ingénieur.<br><br><br></p>
-        <p class="text-cv">Tu peux retrouver mon CV en cliquant <a href="">ici .</a></p> 
-        
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">A propos</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Compétences</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profilePicture-modified.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Bonjour, je suis</p>
+        <h1 class="title">Quentin Guilhamassé</h1>
+        <p class="section__text__p2">Etudiant à l'IUT de Blagnac</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/cv.pdf')"
+          >
+            CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Me contacter
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick='location.href="https://www.linkedin.com/in/quentin-guilhamassé-674181237/"'
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Guilhamasse'"
+          />
+        </div>
+      </div>
     </section>
-    
-    <section class="interêt-page">
-        <div class="fond-bleu">
-        <h2 class="interêt-title">Mes centres d'interêt</h2>
-        <div class="mes-passions">
-            <a class="passions-box basket">
-                <div class="details">
-                   <p class="nom-activité">Basketball</p> 
+    <section id="about">
+      <p class="section__text__p1">En savoir plus</p>
+      <h1 class="title">A propos</h1>
+      <div class="section-container">
+        <!-- <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div> -->
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Formation</h3>
+              <p>3ème année de BUT Informatique <br />IUT de Blagnac</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Entreprise</h3>
+              <p>Alternant chez Human's Connexion <br/>Développeur web</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Je suis actuellement en 3ème de BUT informatique à l'IUT de Blagnac, où mon parcours ma permis d'acquérir de solides compétences
+              en programmation, gestion de projet, communication. Je suis en parallèle en alternance dans une ESN nommé Human's Connexion depuis
+              Septembre 2023. J'ai pu y réaliser de nombreux projets et mettre à profit mes compétences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explorez mes</p>
+      <h1 class="title">Compétences</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Hard skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/html.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <img
+                  src="./assets/css.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML/CSS</h3>
+                  <p>Expérimenté</p>
                 </div>
-            </a>
-            <a class="passions-box jeuxVideos">
-                <div class="details">
-                    <p class="nom-activité">Jeux vidéos</p> 
-                 </div>
-            </a>
-            <a class="passions-box manga">
-                <div class="details">
-                    <p class="nom-activité">Manga</p> 
-                 </div>
-            </a>
-        </div> 
-    </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/java.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Expérimenté</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/php.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/symfony.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Symfony</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/javascript.jpg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Javascript</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/angular.jpg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Angular</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/mysql.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>mySQL</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/ubuntu.jpg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Shell/Ubuntu</h3>
+                  <p>Bases</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Soft Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/anglais.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Anglais</h3>
+                  <p>B2</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/espagne.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Espagnol</h3>
+                  <p>A2</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/gantt.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Gantt</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/git.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/communication.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Communication</h3>
+                  <p>Expérimenté</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/travailEquipe.jpg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Travail d'équipe</h3>
+                  <p>Expérimenté</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
- 
-
+    <section id="experience">
+      <p class="section__text__p1">Acquise lors du</p>
+      <h1 class="title">BUT</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Hard skills</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>Réaliser un développer d'application</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Optimiser des applications informatiques</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Administrer des systèmes informatiques communicants complexes</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Gérer des données de l'information</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Soft Skills</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>Conduire un projet</h3>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Travailler dans une équipe informatique</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Découvrez mes différents</p>
+      <h1 class="title">Projets</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/homepageCoach.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Application Koh-Lanta</h2>
+            <div class="btn-container">
+              <p>Application web de gestion de projet pour les professeurs</p>
+            </div></br>
+            <img
+                  src="./assets/symfony.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+            <img
+                src="./assets/angular.jpg"
+                alt="Experience icon"
+                class="icon"
+            />
+            <img
+                  src="./assets/git.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/accueilSlaveNarrative.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Slave Narratives</h2>
+            <p>Site web pour recenser les récits d'esclaves</p></br>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https:github.com/Aestraa/SlaveNarrativesSAE'"
+              >
+                Github
+              </button>
+            </div></br>
+            <img
+                  src="./assets/html.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+            <img
+                  src="./assets/css.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+            <img
+                  src="./assets/php.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+            <img
+                  src="./assets/git.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/black-jack-1.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Black Jack</h2>
+            <div class="btn-container">
+              <p>Création d'un jeu de BlackJack</p>
+            </div></br>
+            <img
+                  src="./assets/java.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/eCommerce.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Site web E-commerce</h2>
+            <div class="btn-container">
+              <p>Site web de vente de produits d'hiver</p>
+            </div></br>
+            <img
+                  src="./assets/html.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+            <img
+                  src="./assets/css.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+            <img
+                  src="./assets/php.png"
+                  alt="Experience icon"
+                  class="icon"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Prendre contact</p>
+      <h1 class="title">Me contacter</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">quentinguilha@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/quentin-guilhamassé-674181237/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
     <footer>
-        <p class="copyright">&copy; 2021 - Guilhamassé Quentin</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#experience">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Quentin Guilhamassé. Tous droits réservés.</p>
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
